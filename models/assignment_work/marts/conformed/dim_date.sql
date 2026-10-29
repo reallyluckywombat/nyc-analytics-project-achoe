@@ -9,7 +9,7 @@ stg_dob AS (
     SELECT * FROM {{ ref('stg_nyc_dob_jobs') }}
 ),
 
--- Then union dates from the staging data together, collecting all poss dates
+-- Then union date s from the staging data together, collecting all poss dates
 all_dates AS (
 
     -- 311 service requests: date roles referenced by fact_311_service_request
