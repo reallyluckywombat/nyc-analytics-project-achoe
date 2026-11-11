@@ -26,7 +26,7 @@ cleaned AS (
        CAST(collision_id AS STRING) AS collision_id,
 
        -- Date/Time
-       CAST(crash_date AS TIMESTAMP) AS crash_date,
+       CAST(crash_date AS DATE) AS crash_date,
 
        -- casualty details
        CAST(number_of_persons_injured AS INT) AS number_of_persons_injured,
@@ -70,9 +70,9 @@ cleaned AS (
 
    -- Filters
    WHERE collision_id IS NOT NULL
-   AND crash_date_date IS NOT NULL
-   AND CAST(created_date AS DATE) >= '2020-01-01'
-   AND CAST(created_date AS DATE) < '2026-10-21'
+   AND crash_date IS NOT NULL
+   AND CAST(crash_date AS DATE) >= '2020-01-01'
+   AND CAST(crash_date AS DATE) < '2026-10-21'
    AND borough IS NOT NULL
 
    -- Deduplicate
