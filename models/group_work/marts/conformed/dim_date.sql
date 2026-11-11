@@ -3,7 +3,7 @@ WITH stg_311 AS (
 ),
 
 stg_mv AS (
-    SELECT * FROM {{ ref('stg_mv_collision') }}
+    SELECT * FROM {{ ref('stg_mv_collisions') }}
 ),
 
 -- Then union dates from the staging data together, collecting all poss dates
