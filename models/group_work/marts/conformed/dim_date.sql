@@ -25,7 +25,7 @@ all_dates AS (
     -- collision: date roles referenced by crash_date
     SELECT DISTINCT CAST(crash_date AS DATE) AS full_date
     FROM stg_mv
-    WHERE filing_date IS NOT NULL
+    WHERE crash_date IS NOT NULL
 
 ),
 
